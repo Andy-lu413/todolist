@@ -1,0 +1,26 @@
+<view class="container" catchtap="hideDeleteButton">
+  <view class="history-list">
+    <view 
+      wx:for="{{historyList}}" 
+      wx:key="id" 
+
+      class="history-item {{item.isToday ? 'highlight' : ''}}"
+      style="border-left: 8rpx solid {{categoryColors[item.category]}}; --highlight-color: {{categoryColors[item.category]}}"
+      bindlongpress="showDeleteButton"
+      data-id="{{item.id}}"
+    >
+
+        <text class="time">{{item.actionDate}} - {{item.status}}</text>
+        <text class="description">{{item.description}}</text>
+
+      <!-- 删除按钮 -->
+      <view 
+        class="delete-btn {{activeId === item.id ? 'active' : ''}}" 
+        bindtap="handleDelete" 
+        data-id="{{item.id}}"
+      >
+        删除
+      </view>
+    </view>
+  </view>
+</view>

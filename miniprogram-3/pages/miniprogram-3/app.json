@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail", 
+    "pages/history/history",
+    "pages/add/add"
+  ],
+  "window": {
+    "navigationBarTitleText": "今天还有啥没做？",
+    "navigationBarTextStyle":"black",
+    "navigationBarBackgroundColor": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "待办事项"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "iconPath": "images/add.png",
+        "selectedIconPath": "images/add-active.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史记录"
+      }
+    ],
+    "custom": false,
+    "color": "#999",
+    "selectedColor": "#10AEEF",
+    "backgroundColor": "#fff",
+    "borderStyle": "black"
+  }
+}

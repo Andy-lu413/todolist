@@ -1,0 +1,32 @@
+
+<view class="container" catchtap="hideActions">
+  <view wx:for="{{groupedList}}" wx:key="category">
+    <view class="todo-list">
+      <view 
+        wx:for="{{item.todos}}" 
+        wx:key="id" 
+        class="todo-item {{activeId === item.id ? 'active' : ''}}{{item.isToday ? 'highlight' : ''}}"
+        style="border-left: 8rpx solid {{categoryColors[item.category]}}; --highlight-color: {{categoryColors[item.category]}}"
+        bindlongpress="showActions" 
+        data-id="{{item.id}}"
+      >
+        <view class="content">
+          <text class="description">{{item.description}}</text>
+        </view>
+
+        <!-- 详情按钮 -->
+        <button class="btn-detail" bindtap="gotoDetail" data-id="{{item.id}}">...</button>
+        
+        <view 
+        class="actions {{activeId === item.id ? 'active' : ''}}"
+        bindtap="handleActions" 
+        data-id="{{item.id}}"
+        >
+          <button data-id="{{item.id}}" bindtap="handleCancel" class="btn-cancel">取消</button>
+          <button data-id="{{item.id}}" bindtap="handleDo" class="btn-do">做了</button>
+          <button data-id="{{item.id}}" bindtap="handleComplete" class="btn-complete">完成</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

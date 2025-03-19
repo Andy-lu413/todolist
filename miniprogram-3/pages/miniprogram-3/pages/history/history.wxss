@@ -1,0 +1,79 @@
+.container {
+  padding: 20rpx;
+  background-color: #f8f9fa;
+  min-height: 20vh;
+}
+
+.history-list {
+  margin-bottom: 10rpx;
+  width: 600rpx; /* 固定宽度 */
+}
+
+
+.history-item {
+  background-color: white;
+  padding: 20rpx;
+  margin-bottom: 15rpx;
+  border-radius: 15rpx;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4rpx 8rpx rgba(92, 92, 92, 0.5); /* 阴影效果 */
+}
+
+.history-item.highlight {
+  border-bottom: 6rpx solid var(--highlight-color);
+}
+/*
+.history-item.highlight::before {
+  content: '⭐'; 
+  position: absolute;
+  right: 20rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32rpx;
+  color: #FF9800; 
+}*/
+
+.content {
+  flex: 1;
+  padding-right: 20rpx;
+}
+
+.description {
+  font-size: 32rpx;
+  color: #333;
+  display: block;
+  overflow: hidden; /* 超出部分隐藏 */
+  white-space: nowrap; /* 不换行 */
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+}
+
+.time {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.delete-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 160rpx;
+  height: 100rpx;
+  background: #FF6347;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  border-radius: 30rpx;
+  opacity: 0; /* 默认隐藏 */
+  pointer-events: none; /* 默认禁用点击 */
+  transition: opacity 0.2s;
+}
+
+.delete-btn.active {
+  opacity: 1; /* 显示删除按钮 */
+  pointer-events: auto; /* 启用点击 */
+}
+
