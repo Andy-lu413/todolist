@@ -1,0 +1,20 @@
+<view class="detail-container">
+  <view class="detail-item">
+    <text class="label">类型：</text>
+    <text class="value">{{category === '0' ? '工作' : ''}}</text>
+    <text class="value">{{category === '1' ? '学习' : ''}}</text>
+    <text class="value">{{category === '2' ? '生活' : ''}}</text>
+    <text class="value">{{category === '3' ? '运动' : ''}}</text>
+  </view>
+  <view class="detail-item">
+    <text class="label">创建日期：</text>
+    <text class="value">{{createTime}}</text>
+  </view>
+  <view class="detail-item">
+    <text class="label">描述：</text>
+    <text class="value full-description">{{description}}</text>
+  </view>
+
+  <!-- 返回按钮 -->
+  <button class="btn-return" bindtap="goBack">返回</button>
+</view>

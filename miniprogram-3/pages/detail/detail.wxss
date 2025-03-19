@@ -1,0 +1,31 @@
+.detail-container {
+  padding: 30rpx;
+}
+
+.detail-item {
+  margin-bottom: 50rpx;
+}
+
+.label {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.value {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.full-description {
+  white-space: pre-wrap; /* 允许换行 */
+  display: block;
+  margin-top: 20rpx;
+  text-indent: 64rpx;
+}
+
+.btn-return {
+  margin-top: 50rpx;
+  background: #696969;
+  color: white;
+  border-radius: 50rpx;
+}

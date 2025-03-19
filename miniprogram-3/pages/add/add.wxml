@@ -1,0 +1,32 @@
+<view class="container" style="border-top: 10rpx solid {{backgroundColor}};">
+  <form bindsubmit="submitForm">
+    
+      <!-- 右侧描述输入框 -->
+      <view class="input-container">
+        <textarea 
+          name="description" 
+          placeholder="请输入事项描述" 
+          value="{{description}}" 
+          class="description-input"
+          style="border-left: 8rpx solid {{backgroundColor}};" 
+          auto-height 
+          fixed 
+          cursor-spacing="20"
+        />
+      </view>
+    
+    <view class="form-container"  >
+    <view class="type-picker-container" bindtap="changeCategory">
+        <view class="type-picker" >
+          <text class="type-text">{{categoryText || '请选择类型'}} ▼</text>
+        </view>
+      </view>
+
+      <!-- 隐藏的 input，用于绑定 category -->
+      <input name="category" value="{{category}}" style="display: none;" />
+
+    <!-- 确定按钮 -->
+    <button class="submit-btn" formType="submit">√</button>
+  </view>
+  </form>
+</view>

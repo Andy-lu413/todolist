@@ -1,0 +1,77 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600rpx;
+  margin-top: 60rpx;
+
+  
+}
+
+/* 左侧类型选择 */
+.type-picker-container {
+  width: 200rpx;
+  height:100rpx;
+  display: flex;
+  justify-content: center;
+  margin-left: 100rpx;
+}
+
+.type-picker {
+  width: 100%;
+  border-radius: 15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32rpx;
+  color: #333;
+  box-shadow: 0 4rpx 8rpx rgba(92, 92, 92, 0.5); /* 阴影效果 */
+}
+
+.type-text {
+  flex: 1;
+  text-align: center;
+}
+
+
+/* 右侧描述输入框 */
+.input-container {
+  width: 100%;
+  height: auto;
+  padding-left: 0rpx;
+}
+
+.description-input {
+  width: 600rpx;
+  font-size: 36rpx;
+  white-space: pre-wrap; /* 允许换行 */
+  color: #333;
+  border: 1rpx solid #e0e0e0;
+  border-radius: 15rpx;
+  padding: 20rpx;
+  background-color: #ffffff;
+  box-shadow: 0 4rpx 8rpx rgba(92, 92, 92, 0.5); /* 阴影效果 */
+  line-height: 1.5; /* 行高 */
+}
+
+/* 确定按钮 */
+.submit-btn {
+  width: 200rpx;
+  background: #5eabf3;
+  color: white;
+  border-radius: 15rpx;
+  font-size: 32rpx;
+  padding: 10rpx;
+  box-shadow: 0 4rpx 8rpx rgba(92, 92, 92, 0.5); /* 阴影效果 */
+}

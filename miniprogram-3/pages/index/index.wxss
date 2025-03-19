@@ -1,0 +1,106 @@
+.container {
+  padding: 10rpx;
+  background-color: #f8f9fa;
+  min-height: 20vh;
+  box-sizing: border-box; /* 防止 padding 导致溢出 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 内容居中 */
+}
+
+.todo-list {
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  width: 600rpx; /* 固定宽度 */
+}
+
+.todo-item {
+  background-color: white;
+  padding: 20rpx;
+  margin-bottom: 10rpx;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* 通长 */
+  box-sizing: border-box; /* 防止 padding 导致溢出 */
+  max-width: 600rpx; /* 固定宽度 */
+  position: relative; /* 为 actions 定位提供参考 */
+  box-shadow: 0 4rpx 8rpx rgba(92, 92, 92, 0.5); /* 阴影效果 */
+}
+
+.content {
+  flex: 1;
+  padding-right: 20rpx;
+  overflow: hidden; /* 超出部分隐藏 */
+  white-space: nowrap; /* 不换行 */
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+}
+
+.description {
+  font-size: 40rpx;
+  color: #333;
+  display: block;
+  margin-bottom: 6rpx;
+  overflow: hidden; /* 超出部分隐藏 */
+  white-space: nowrap; /* 不换行 */
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+}
+
+.time {
+  font-size: 24rpx;
+  color: #999;
+  overflow: hidden; /* 超出部分隐藏 */
+  white-space: nowrap; /* 不换行 */
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+}
+
+/* 今天操作的事项亮显样式 */
+.todo-item.highlight {
+  background: linear-gradient(120deg, var(--highlight-color) 0%, white 10%);
+}
+
+.actions {
+  display: flex;
+  gap: 10rpx;
+  opacity: 0; /* 默认透明 */
+  transition: opacity 0.2s;
+  flex-shrink: 0; /* 防止按钮被压缩 */
+  position: absolute; /* 绝对定位 */
+  left: 50%; /* 水平居中 */
+  transform: translateX(-50%); /* 水平居中 */
+  pointer-events: none; /* 默认禁用点击 */
+}
+
+.actions.active {
+  opacity: 1;
+  pointer-events: auto; /* 显示时启用点击 */
+}
+
+.actions button {
+  width: 110rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  padding: 0;
+  border-radius: 10rpx;
+}
+
+.btn-cancel { background: #FF6347; color: white; }
+.btn-do { background: #B8E986; color: white; }
+.btn-complete { background: #10AEEF; color: white; }
+
+
+
+.btn-detail {
+  border: 1rpx solid rgb(80, 80, 80);
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 35rpx;
+  font-size: 28rpx;
+  padding: 0;
+  border-radius: 25rpx;
+  background: #ffffff;
+  color: rgb(85, 85, 85);
+  flex-shrink: 0; /* 防止按钮被压缩 */
+}
